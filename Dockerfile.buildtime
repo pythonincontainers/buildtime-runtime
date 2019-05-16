@@ -1,0 +1,8 @@
+FROM python:3
+WORKDIR /django-mysite
+COPY . .
+RUN pip install -r requirements.txt
+RUN mkdir -p /data && python manage.py migrate
+RUN bash create-admin.sh
+VOLUME /data
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
