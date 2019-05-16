@@ -1,7 +1,10 @@
 #! /bin/bash
 
+# Install Python Libraries from requirements.txt
+pip install -r requirements.txt
+
 # Create /data directory to store sqlite3 data files
-mkdir /data
+mkdir -p /data
 
 # Initialize Database
 python manage.py migrate
