@@ -1,5 +1,2 @@
 FROM python:3
-RUN echo git clone https://github.com/pythonincontainers/buildtime-runtime >> /tmp/extreme.sh
-RUN echo cd buildtime-runtime >> /tmp/extreme.sh
-RUN echo bash run-server.sh >> /tmp/extreme.sh
-CMD ["/bin/bash", "/tmp/extreme.sh"]
+CMD ["/bin/bash", "-c", "git clone https://github.com/pythonincontainers/buildtime-runtime; cd buildtime-runtime; source run-server.sh"]
