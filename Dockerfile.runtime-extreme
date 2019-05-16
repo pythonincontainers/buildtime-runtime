@@ -1,2 +1,3 @@
 FROM python:3
 CMD ["/bin/bash", "-c", "git clone https://github.com/pythonincontainers/buildtime-runtime; cd buildtime-runtime; source run-server.sh"]
+
